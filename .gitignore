@@ -9,9 +9,6 @@ __pycache__/
 data/raw/
 data/processed/*
 
-# Model artifacts
-ml/*.pkl
-
 # OS junk
 .DS_Store
 Thumbs.db
