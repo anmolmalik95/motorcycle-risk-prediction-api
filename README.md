@@ -1,9 +1,13 @@
+<p align="center">
+  <img src="assets/banner2.png" alt="Motorcycle Risk Prediction API banner" width="700">
+</p>
+
 # Motorcycle Risk Prediction API
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
 ![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-orange)
 ![Status](https://img.shields.io/badge/Status-Project%20WIP-yellow)
-![Rider](https://img.shields.io/badge/Built%20by-Motorcycle%20Tourer-black)
+
 
 ## 1. Introduction
 I ride almost every day. I've toured across borders, climbed high-altitude mountain passes in the himalayas, and wandered through places where roads turn into suggestions. On a motorcycle, you feel everything - the cold air before sunrise, the warning smell of incoming rain, the way visibility drops when fog rolls in. These little signals matter, they're part of every rider's instinct.
@@ -53,7 +57,21 @@ motorcycle-risk-api/
 
 ---
 
-## 4. API Overview
+## 4. Architecture Overview
+
+```mermaid
+flowchart TD
+    A[User or rider\nSends trip and weather data] --> B[FastAPI API\n/api/v1/risk/predict-risk]
+    B --> C[Pydantic schemas\nRiskRequest and RiskResponse]
+    C --> D[Service layer\npredict_risk in risk_service.py]
+    D --> E[ML model\nRandomForestRegressor\nrisk_model.pkl]
+    E --> F[Risk score and advice\nLow, Medium, High]
+    F --> A[User or rider\nSees risk and guidance]
+```
+
+---
+
+## 5. API Overview
 Base URL (local):
 ```
 http://127.0.0.1:8000
@@ -85,7 +103,7 @@ Response:
 
 ---
 
-## 5. Machine Learning Pipeline
+## 6. Machine Learning Pipeline
 ### Dataset
 I started with the US Accidents dataset ([downloaded from Kaggle](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents?resource=download)) and extracted:
 - Temperature (converted to Celsius)
@@ -110,7 +128,7 @@ RandomForestRegressor with:
 
 ---
 
-## 6. Running the Project
+## 7. Running the Project
 ### 1. Create the virtual environment
 ```
 python -m venv .venv
@@ -134,24 +152,24 @@ python ml/train_model.py
 
 ---
 
-## 7. Deployment
+## 8. Deployment
 This project is deployable on:
 - Render
 - Railway
-- Docker (optional future step)
+- Docker (future step)
 
 Once deployed, the API will behave exactly the same as the local version.
 
 ---
 
-## 8. Why This Project Matters
+## 9. Why This Project Matters
 This is not just a coding exercise, it's grounded in lived experience.
 
 Riders make hundreds of micro-judgments every minute. Understanding how environmental factors influence risk can genuinely help riders make safer decisions. This project is my attempt to bring together two worlds I care deeply about: motorcycling and applied machine learning.
 
 ---
 
-## 9. Future Improvements
+## 10. Future Improvements
 - Add more granular weather categories
 - Add GPS route-risk scoring
 - Add a simple frontend for riders
@@ -160,7 +178,7 @@ Riders make hundreds of micro-judgments every minute. Understanding how environm
 
 ---
 
-## 10. Credits
+## 11. Credits
 - US Accidents dataset from Kaggle
 - FastAPI for the backend framework
 - scikit-learn for model training
