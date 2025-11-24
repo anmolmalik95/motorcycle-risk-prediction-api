@@ -9,7 +9,7 @@
 ![Status](https://img.shields.io/badge/Status-Project%20WIP-yellow)
 
 ### Live Demo  
-[👉 Try the API here](https://motorcycle-risk-prediction-api.onrender.com/docs#/risk/predict_api_v1_risk_predict_risk_post)
+👉 [Try the API here](https://motorcycle-risk-prediction-api.onrender.com/docs#/risk/predict_api_v1_risk_predict_risk_post)
 
 
 ## 1. Introduction
