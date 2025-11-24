@@ -61,15 +61,28 @@ motorcycle-risk-api/
 
 ```mermaid
 flowchart TD
-    U[User inputs ride conditions<br>(weather, visibility, distance,<br>time of day, experience)]
-    A[FastAPI<br>/api/v1/risk/predict-risk]
-    B[Pydantic schemas<br>RiskRequest and RiskResponse]
-    C[Service layer<br>predict_risk in risk_service.py]
-    D[ML model<br>RandomForestRegressor<br>risk_model.pkl]
-    E[Model output<br>Risk score + contextual advice]
+    U["User inputs ride conditions
+    (weather, visibility,
+    distance, time of day,
+    experience)"]
 
-    U --> A --> B --> C --> D --> E
-    E -.-> U
+    A["FastAPI endpoint
+    /api/v1/risk/predict-risk"]
+
+    B["Pydantic validation
+    RiskRequest → RiskResponse"]
+
+    C["Service layer
+    predict_risk()"]
+
+    D["ML model (RandomForestRegressor)
+    risk_model.pkl"]
+
+    R["Returns risk score
+    and contextual advice"]
+
+    U --> A --> B --> C --> D --> R
+    R --> U
 ```
 
 ---
