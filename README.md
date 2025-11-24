@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner2.png" alt="Motorcycle Risk Prediction API banner" width="700">
+  <img src="assets/banner2.png" alt="Motorcycle Risk Prediction API banner" width="100%">
 </p>
 
 # Motorcycle Risk Prediction API
