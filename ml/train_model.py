@@ -29,8 +29,10 @@ def main():
     print("y_test shape:", y_test.shape)
 
     model = RandomForestRegressor(
-        n_estimators=200,
-        random_state=1738
+        n_estimators=600,
+        max_depth=None,
+        n_jobs=-1,
+        random_state=1738,
     )
 
     model.fit(X_train, y_train)
@@ -40,7 +42,7 @@ def main():
     mae = mean_absolute_error(y_test, y_pred)
     print("Mean Absolute Error on test set:", mae)
 
-    joblib.dump(model, MODEL_PATH)
+    joblib.dump(model, MODEL_PATH, compress=3)
     print (f"Saved model to {MODEL_PATH}")
 
 if __name__ == "__main__":
