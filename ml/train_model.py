@@ -29,8 +29,8 @@ def main():
     print("y_test shape:", y_test.shape)
 
     model = RandomForestRegressor(
-        n_estimators=600,
-        max_depth=None,
+        n_estimators=80,
+        max_depth=15,
         n_jobs=-1,
         random_state=1738,
     )
