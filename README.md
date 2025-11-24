@@ -9,8 +9,8 @@
 ![Status](https://img.shields.io/badge/Status-Project%20WIP-yellow)
 
 ### Live Demo  
-Try the API here:  
-👉 **https://motorcycle-risk-prediction-api.onrender.com/docs**
+[👉 Try the API here](https://motorcycle-risk-prediction-api.onrender.com/docs#/risk/predict_api_v1_risk_predict_risk_post)
+
 
 ## 1. Introduction
 I ride almost every day. I've toured across borders, climbed high-altitude mountain passes in the himalayas, and wandered through places where roads turn into suggestions. On a motorcycle, you feel everything - the cold air before sunrise, the warning smell of incoming rain, the way visibility drops when fog rolls in. These little signals matter, they're part of every rider's instinct.
