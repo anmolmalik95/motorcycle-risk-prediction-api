@@ -61,12 +61,15 @@ motorcycle-risk-api/
 
 ```mermaid
 flowchart TD
-    A[User or rider\nSends trip and weather data] --> B[FastAPI API\n/api/v1/risk/predict-risk]
-    B --> C[Pydantic schemas\nRiskRequest and RiskResponse]
-    C --> D[Service layer\npredict_risk in risk_service.py]
-    D --> E[ML model\nRandomForestRegressor\nrisk_model.pkl]
-    E --> F[Risk score and advice\nLow, Medium, High]
-    F --> A[User or rider\nSees risk and guidance]
+    U[User inputs ride conditions<br>(weather, visibility, distance,<br>time of day, experience)]
+    A[FastAPI<br>/api/v1/risk/predict-risk]
+    B[Pydantic schemas<br>RiskRequest and RiskResponse]
+    C[Service layer<br>predict_risk in risk_service.py]
+    D[ML model<br>RandomForestRegressor<br>risk_model.pkl]
+    E[Model output<br>Risk score + contextual advice]
+
+    U --> A --> B --> C --> D --> E
+    E -.-> U
 ```
 
 ---
