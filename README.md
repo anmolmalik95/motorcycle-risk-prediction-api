@@ -1,7 +1,12 @@
 # Motorcycle Risk Prediction API
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
+![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-orange)
+![Status](https://img.shields.io/badge/Status-Project%20WIP-yellow)
+![Rider](https://img.shields.io/badge/Built%20by-Motorcycle%20Tourer-black)
 
 ## 1. Introduction
-I ride almost every day. I've toured across borders, climbed high-altitude mountain passes in the himalayas, and wandered through places where roads turn into suggestions. On a motorcycle, you feel everything - the cold air before sunrise, the warning smell of incoming rain, the way visibility drops when fog rolls in. These little signals matter. They're part of every rider's instinct.
+I ride almost every day. I've toured across borders, climbed high-altitude mountain passes in the himalayas, and wandered through places where roads turn into suggestions. On a motorcycle, you feel everything - the cold air before sunrise, the warning smell of incoming rain, the way visibility drops when fog rolls in. These little signals matter, they're part of every rider's instinct.
 
 But instincts aren't perfect. So I decided to build something that blends my lived experience with machine learning: a system that predicts accident risk based on weather, visibility, distance, time of day, and rider experience.
 
