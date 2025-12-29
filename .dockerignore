@@ -1,0 +1,36 @@
+# ---- Python junk ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ---- Virtual environments ----
+.venv/
+venv/
+ENV/
+env/
+
+# ---- Git ----
+.git/
+.gitignore
+
+# ---- VS Code / IDE ----
+.vscode/
+.idea/
+
+# ---- Test / tooling caches ----
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+
+# ---- Local data (keep images small) ----
+data/
+assets/
+
+# ---- Secrets ----
+.env
+.env.*

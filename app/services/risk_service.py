@@ -1,9 +1,10 @@
 import pandas as pd
 import joblib
+import os
 
 from app.schemas.risk import RiskRequest
 
-MODEL_PATH = "ml/risk_model.pkl"
+MODEL_PATH = os.getenv("MODEL_PATH", "ml/risk_model.pkl")
 
 FEATURE_COLUMNS = [
     "temperature_c",
